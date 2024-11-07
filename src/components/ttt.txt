@@ -1,0 +1,23 @@
+"use client";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+
+const WeDo = () => {
+  const targetReff = useRef(null);
+  const { scrollYProgress } = useScroll({ target: targetReff });
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]);
+  return (
+    <div className="carousell" ref={targetReff}>
+      <div className="contentContainerr">
+        <motion.div style={{ x }} className="imagess">
+          <div className="one text-[50px] flex justify-center items-center h-[100vh]">
+          
+          </div>
+          <div className="two">k</div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default WeDo;

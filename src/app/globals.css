@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+body{
+  background:#1F0038;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #8F809c;
+  
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 2s infinite;
+}
+
+/* General box styling and animation */
+.box-container .box {
+  background-color: #ab8eff;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: move-right ease-in-out infinite;
+}
+
+/* Apply staggered delays for each box in container with a longer animation duration */
+.box-container:nth-child(1) .box {
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.box-container:nth-child(2) .box {
+  animation-duration: 4s;
+  animation-delay: 0.6s;
+}
+
+.box-container:nth-child(3) .box {
+  animation-duration: 4s;
+  animation-delay: 1.2s;
+}
+
+.box-container:nth-child(4) .box {
+  animation-duration: 4s;
+  animation-delay: 1.8s;
+}
+
+.box-container:nth-child(5) .box {
+  animation-duration: 4s;
+  animation-delay: 2.4s;
+}
+
+.box-container:nth-child(6) .box {
+  animation-duration: 4s;
+  animation-delay: 3s;
+}
+
+.box-container:nth-child(7) .box {
+  animation-duration: 4s;
+  animation-delay: 3.6s;
+}
+
+.box-container:nth-child(8) .box {
+  animation-duration: 4s;
+  animation-delay: 4.2s;
+}
+
+.box-container:nth-child(9) .box {
+  animation-duration: 4s;
+  animation-delay: 4.8s;
+}
+
+@keyframes move-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+}
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.contentContainer {
+  width: 100%;
+  position: relative;
+}
+
+.textItems {
+  display: flex;
+  gap: 40px; /* Spacing between text items */
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.textItem {
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+
+.carousell {
+background-color: white;
+height: 200vh;
+}
+
+.contentContainerr {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+
+.imagess{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  
+}
+
+.one{
+  width: 100vw;
+  height: 100vh;
+  background-color: #1F0038;
+}
+.two{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
