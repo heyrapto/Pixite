@@ -15,7 +15,6 @@ import lynda from "@/public/images/unnamed(7).png";
 import stephan from "@/public/images/unnamed(8).png";
 import anthony from "@/public/images/unnamed(9).png";
 import sound from "@/public/sounds/popp.mp3";
-import { PiMicrophoneThin } from "react-icons/pi";
 const Testimonial = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
