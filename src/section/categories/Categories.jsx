@@ -7,49 +7,49 @@ import { motion } from "framer-motion";
 
 const categories = [
   {
-    name: "SEO",
+    name: "SUPPLY CHAIN TRACEABILITY",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Autify Network’s API brings blockchain- and AI-powered supply chain traceability into your systems. Track and share product origin, movement, and ownership with real-time, tamper-proof data.",
   },
   {
-    name: "WEB DESIGN",
+    name: "TRACT & TRACE SUSTAINABILITY TRACEABILITY",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Our Sustainability Traceability API tracks and documents the environmental and social impact of products across the supply chain. It standardizes data on emissions, water use, labor standards, and more for a complete view of sustainability metrics.",
   },
   {
-    name: "GOOGLE ADS",
+    name: "RECYCLING & CIRCULAR ECONOMY",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Enable closed-loop recycling by tracking materials from use to reuse with Autify’s tamper-proof API.",
   },
   {
-    name: "FACEBOOK & INSTAGRAM ADS",
+    name: "EPR & CARBON CREDIT MGMT",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Automate EPR compliance and carbon credit tracking with one API—covering plastics, tyres, electronics, and emissions.",
   },
   {
-    name: "DIGITAL MARKETING",
+    name: "VENDOR AGGREGATOR PLATFORM",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Companies can easily discover, evaluate, and collaborate with vendors, expanding their global reach while maintaining quality and compliance.",
   },
   {
-    name: "BRANDING",
+    name: "B2B CROSS BORDER PAYMENTS",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Autify Network powers real-time, low-cost, cross-border B2B payments with secure blockchain technology.",
   },
   {
-    name: "EMAIL MARKETING",
+    name: "TRADE FINANCE",
     description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+      "Our platform brings transparency and automation to trade finance, making it easier for businesses to access funding and manage risk. ",
   },
-  {
-    name: "SOCIAL MEDIA MARKETING",
-    description:
-      "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
-  },
-  {
-    name: "PRINTING & DESIGNS",
-    description: "High-quality printing services for all needs.",
-  },
+  // {
+  //   name: "SOCIAL MEDIA MARKETING",
+  //   description:
+  //     "Your website isn't going to go anyhwere if no one can find it. We enable businesses to grow their search presence online. SEO is the best way to empoer trust from potential customers and drive leads and online sales.",
+  // },
+  // {
+  //   name: "PRINTING & DESIGNS",
+  //   description: "High-quality printing services for all needs.",
+  // },
 ];
 
 const containerVariants = {
@@ -77,6 +77,10 @@ const cardVariants = {
     },
   },
 };
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase());
+}
 
 export default function Categories() {
   return (
@@ -113,7 +117,7 @@ export default function Categories() {
                 alt={`${category.name} icon`}
                 className="w-[67px] h-[67px]"
               />
-              <h4 className="text-[45px] leading-[45px]">{category.name}</h4>
+              <h4 className="text-[45px] leading-[45px]">{toTitleCase(category.name)}</h4>
               <p className="text-white text-base font-semibold leading-[20px] font-lightRocGrotesk">
                 {category.description}
               </p>

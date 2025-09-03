@@ -53,13 +53,11 @@ export default function Ranking() {
         {/* Background Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-[#0DFD0D] text-white z-0 md:px-0 px-5">
         <h1 className="font-condRocGrotesk xl:text-[127px] text-[58px] text-center uppercase text-[#1F0038] md:leading-[120px] leading-[52px] mb-3">
-        Say Hello To <br /> Ranking First
+        Say Hello To <br /> Climate Tech
       </h1>
 
       <p className="font-regRocGrotesk text-[#1F0038] md:text-[34px] text-[24px] text-center md:w-[1000px] md:mt-1 -mt-2">
-        Pixite delivers powerful SEO and Google Ads campaigns, we also create
-        nimble high-converting websites that turn visitors into customer
-        experiences.
+      We’re building the blockchain infrastructure for tokenized real-world assets, from EPR and plastic credits to carbon offsets. 
       </p>
         </div>
 

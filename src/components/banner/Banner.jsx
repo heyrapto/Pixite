@@ -14,40 +14,39 @@ export default function Banner() {
   return (
     <div className="carousel overflow-hidden" ref={targetRef}>
       <div className="contentContainer font-condRocGrotesk text-[#1F003F]">
-        {/* First text moving from right to left */}
+        {/* First row */}
         <div className="bg-[#DCFF7A] h-[130px] w-full flex items-center -skew-y-1">
           <motion.div
             style={{ x: xFirst }}
             className="textItems font-condRocGrotesk flex items-center"
           >
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
+            <div className="text-[93px] uppercase">Cut Carbon</div>
+            <div className="text-[93px] uppercase">Cut Carbon</div>
+            <div className="text-[93px] uppercase">Cut Carbon</div>
+            <div className="text-[93px] uppercase">Cut Carbon</div>
           </motion.div>
         </div>
 
-        {/* Second text moving from right to left */}
+        {/* Second row */}
         <div className="bg-[#5747FF] h-[130px] w-full flex items-center">
-          <motion.div style={{ x: xSecond }} className="textItems">
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
+          <motion.div style={{ x: xSecond }} className="textItems flex items-center">
+            <div className="text-[93px] uppercase">Track Emissions</div>
+            <div className="text-[93px] uppercase">Track Emissions</div>
+            <div className="text-[93px] uppercase">Track Emissions</div>
+            <div className="text-[93px] uppercase">Track Emissions</div>
           </motion.div>
         </div>
 
-        {/* Third text moving from right to left */}
+        {/* Third row */}
         <div className="bg-[#0DFD0D] h-[130px] w-full flex items-center -skew-y-1">
-          <motion.div style={{ x: xThird }} className="textItems">
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
-            <div className="text-[93px] uppercase">Growing Businesses</div>
+          <motion.div style={{ x: xThird }} className="textItems flex items-center">
+            <div className="text-[93px] uppercase">End Greenwashing</div>
+            <div className="text-[93px] uppercase">End Greenwashing</div>
+            <div className="text-[93px] uppercase">End Greenwashing</div>
+            <div className="text-[93px] uppercase">End Greenwashing</div>
           </motion.div>
         </div>
       </div>
     </div>
   );
 }
- 

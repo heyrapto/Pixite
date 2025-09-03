@@ -91,7 +91,7 @@ const Navbar = () => {
                 onMouseLeave={handleMouseLeave}
                 className="text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200"
               >
-                Projects
+                Company
                 <PiCaretDownBold className="text-[18px]" />
               </button>
               <button
@@ -113,7 +113,7 @@ const Navbar = () => {
             </nav>
 
             <button className="bg-white hover:bg-transparent hover:border-[2px] border-white hover:text-white  xl:ml-4 lg:px-[28px] px-[16px] md:py-[10px] py-3 uppercase text-xs md:text-lg font-roc_grotesk">
-              Start a Project
+              Talk to Sales
             </button>
             <div className="xl:hidden block space-y-[3px]">
               <span className="block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out "></span>
@@ -160,60 +160,42 @@ const Expertise = () => {
   const services = [
     {
       id: 1,
-      title: "SEO",
-      description: "Boost your business with award-winning services",
+      title: "Supply Chain Traceability",
+      description: "Track product origin and movement with blockchain integrity",
       image: seo,
     },
     {
       id: 2,
-      title: "Web Development",
-      description: "Create stunning and functional websites",
-      image: seo, // Replace with actual image
+      title: "Sustainability Tracking",
+      description: "Measure emissions, water use, and labor standards at scale",
+      image: seo,
     },
     {
       id: 3,
-      title: "Digital Marketing",
-      description:
-        "Drive traffic and sales with effective marketing strategies",
-      image: seo, // Replace with actual image
+      title: "Recycling & Circular Economy",
+      description: "Follow materials from collection to reuse in closed loops",
+      image: seo,
     },
     {
       id: 4,
-      title: "UI/UX Design",
-      description: "Enhance user experience with intuitive designs",
-      image: seo, // Replace with actual image
+      title: "EPR & Carbon Credits",
+      description: "Automate compliance and carbon credit tracking globally",
+      image: seo,
     },
     {
       id: 5,
-      title: "Content Creation",
-      description: "Engage your audience with quality content",
-      image: seo, // Replace with actual image
+      title: "B2B Climate Payments",
+      description: "Enable real-time, low-cost, cross-border green payments",
+      image: seo,
     },
     {
       id: 6,
-      title: "Consulting",
-      description: "Get expert advice tailored to your needs",
-      image: seo, // Replace with actual image
-    },
-    {
-      id: 4,
-      title: "UI/UX Design",
-      description: "Enhance user experience with intuitive designs",
-      image: seo, // Replace with actual image
-    },
-    {
-      id: 5,
-      title: "Content Creation",
-      description: "Engage your audience with quality content",
-      image: seo, // Replace with actual image
-    },
-    {
-      id: 6,
-      title: "Consulting",
-      description: "Get expert advice tailored to your needs",
-      image: seo, // Replace with actual image
+      title: "Climate Finance",
+      description: "Bring transparency and access to sustainable trade finance",
+      image: seo,
     },
   ];
+  
   return (
     <div className=" flex justify-center w-full">
       <div className="w-[1050px] text-white">

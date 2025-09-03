@@ -5,41 +5,41 @@ import track from "@/public/images/Business-Product-Report-Present-Grahp-Streaml
 const data = [
   {
     id: 1,
-    title: "Proven track record",
+    title: "Plastic Recovery",
     description:
-      "Skip the rookies and ride with the pros. We've got a treasure trove of victories under our belt, each one a stepping stone to your business growth. Let's add your win to our highlight reel.",
+      "Tons of plastic collected, traced, and converted into verified plastic credits.",
     imageSrc: track,
     bgColor: "#5747FF",
   },
   {
     id: 2,
-    title: "Proven track record",
+    title: "Carbon Offsets",
     description:
-      "Skip the rookies and ride with the pros. We've got a treasure trove of victories under our belt, each one a stepping stone to your business growth. Let's add your win to our highlight reel.",
+      "Credits are generated through reforestation, waste-to-energy, and clean energy projects.",
     imageSrc: track,
     bgColor: "#5747FF",
   },
   {
     id: 3,
-    title: "Proven track record",
+    title: "Circular Economy Enablement",
     description:
-      "Skip the rookies and ride with the pros. We've got a treasure trove of victories under our belt, each one a stepping stone to your business growth. Let's add your win to our highlight reel.",
+      "Verified recyclers, processors, and recovery partners digitized via on-chain infrastructure.",
     imageSrc: track,
     bgColor: "#5747FF",
   },
   {
     id: 4,
-    title: "Proven track record",
+    title: "Inclusive Finance Access",
     description:
-      "Skip the rookies and ride with the pros. We've got a treasure trove of victories under our belt, each one a stepping stone to your business growth. Let's add your win to our highlight reel.",
+      "SMEs and recyclers are receiving faster payments and working capital through tokenized finance tools.",
     imageSrc: track,
     bgColor: "#5747FF",
   },
   {
     id: 5,
-    title: "Proven track record",
+    title: "EPR Compliance Automation",
     description:
-      "Skip the rookies and ride with the pros. We've got a treasure trove of victories under our belt, each one a stepping stone to your business growth. Let's add your win to our highlight reel.",
+      "EPR credits are issued, sold, and retired with full traceability and policy alignment.",
     imageSrc: track,
     bgColor: "#5747FF",
   },

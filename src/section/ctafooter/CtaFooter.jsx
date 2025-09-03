@@ -16,16 +16,17 @@ export default function CtaFooter() {
         </div>
         <div className="absolute w-full  h-full flex flex-col items-center justify-center z-20">
           <h1 className="font-condRocGrotesk md:text-[100px] text-[42px]  uppercase mb-5">
-            Lets Grow Together
+          Build or Buy Verified Climate Impact
           </h1>
           <p className="font-lightRocGrotesk md:w-[768px] text-center md:text-[24px] text-[19px] font-semibold md:px-0 px-5">
-            Its time we talked. We;re not just another digital marketing agency
-            – were your growth partners, your success allies, and occasionally,
-            your biggest cheerleaders.
+          Whether you’re a brand looking to meet EPR targets or a builder looking to integrate verified carbon data, let’s work together.
+
+Talk to Sales
+
           </p>
           <div className="md:px-0 px-5 md:w-auto  w-full">
             <button className="bg-[#8C00FF] w-full mt-5 font-roc_grotesk text-white px-[29px] py-[12px] uppercase text-lg">
-              Start a Project
+              Talk to Sales
             </button>
           </div>
         </div>

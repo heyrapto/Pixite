@@ -9,47 +9,47 @@ const data = {
       title: "Explore",
       items: [
         "Home",
-        "Expertise",
-        "Past Work",
-        "Success Stories",
-        "Our Difference",
+        "Solutions",
+        "Case Studies",
+        "Impact Stories",
+        "Our Approach",
         "Our Team",
         "Careers",
         "Contact Us",
-        "Blog",
+        "Insights",
       ],
     },
     {
       title: "Our Work",
       items: [
-        "Crafting a Robust Digital Presence for ...",
-        "Creating a Premium Chef-Led Tour...",
-        "Elevating a Non-Profit's Digital Presence",
-        "Transforming a Traditional Antique...",
-        "Launching a Pharmacist-Focused Digit...",
-        "Empowering a Community-Driven...",
-        "Elevating The Velocity Home Lifts...",
-        "A Refresh for Penrith Serviced Offices",
-        "Launching a Footwear E-commerce...",
-        "A High-Converting Landing Page for...",
+        "Tracing Sustainable Coffee Supply Chains",
+        "Building a Closed-Loop Recycling System",
+        "Empowering Ethical Fashion Transparency",
+        "Tracking Emissions for Global Logistics",
+        "Automating EPR Compliance for Plastics",
+        "Verifying Fair Labor in Agriculture",
+        "Enabling Low-Carbon Cross-Border Payments",
+        "Digitizing Vendor Sustainability Data",
+        "Financing Climate-Smart Trade Projects",
+        "Circular Economy Tracking for Electronics",
       ],
     },
     {
-      title: "Success Stories",
+      title: "Impact Stories",
       items: [
-        "Custom eCommerce Solution Drives...",
-        "Stepping Up Success: Our Footwear...",
-        "Elevating Success: The Velocity Home...",
+        "Carbon Credits Verified with Transparency",
+        "Circular Economy Driving Business Growth",
+        "Supply Chain Traceability at Scale",
       ],
     },
     {
       title: "Latest Article",
       items: [
-        "Why InHouse Expertise Beats White-..",
-        "Understanding the impact of Web Vita...",
-        "The Magic of Micro-Interactions: Why...",
-        "Tracking Conversion:The Old vs The...",
-        "Why Elementor is Not a professsional...",
+        "Why Supply Chain Transparency is Non-Negotiable",
+        "The Future of Carbon Credits in Global Trade",
+        "How Blockchain Enables Circular Economies",
+        "From Offsets to Real Impact: What Matters",
+        "EPR Compliance: Turning Burden into Benefit",
       ],
     },
   ],
@@ -58,16 +58,16 @@ const data = {
 const categoryData = [
   {
     items: [
-      "SEO",
-      "Facebook & Instagram Ads",
-      "Email Marketing",
+      "Supply Chain Traceability",
+      "Sustainability Tracking",
+      "Recycling & Circular Economy",
     ],
   },
   {
-    items: ["Web Design", "Digital Marketing", "Socail Media Marketing"],
+    items: ["EPR & Carbon Credits", "B2B Climate Payments", "Climate Finance"],
   },
   {
-    items: ["Google Ads", "Branding", "Printing Design"],
+    items: ["Vendor Aggregation", "Impact Verification", "Transparency Tools"],
   },
 ];
 
@@ -83,7 +83,8 @@ export default function Footer() {
 
         <div className="flex flex-col md:items-end ">
           <h4 className="font-lightRocGrotesk text-white md:text-[24px] text-[19px] md:text-right  md:mt-0 mt-5  leading-[25px]">
-            Enabling businesses to grow and thrive <br /> online since 2013.
+            Enabling climate accountability and <br /> sustainable growth since
+            2013.
           </h4>
           <div className="flex gap-4 items-center md:mt-[10px] mt-6">
             {Array(4)
@@ -142,20 +143,19 @@ export default function Footer() {
       <div className="md:pt-[200px] pt-[100px] flex md:flex-col flex-col justify-center items-center text-center md:px-0 px-6 ">
         <div className="md:w-[512px]">
           <p className="text-center text-sm text-white font-lightRocGrotesk ">
-            Pixite acknowledges that we live, work, and create on the unceded
-            land of the Gundungurra and Darug people. Always was, always will
-            be.
+            Autify Network acknowledges that we live, work, and build solutions
+            on lands that carry deep histories of stewardship. We honor and
+            respect those who care for the Earth — past, present, and future.
           </p>
           <div className="py-3">
             <p className="text-center text-sm text-white font-lightRocGrotesk ">
-              {" "}
               2C/21 Lawson St, Penrith NSW 2750
             </p>
             <p className="text-center text-sm text-white font-lightRocGrotesk ">
-              © 2024 Pixite Pty Ltd. All right reserved.
+              © 2024 Autify Network. All rights reserved.
             </p>
           </div>
-          <div className="flex justify-center  gap-5 items-center text-[11px] flex-row  text-white font-lightRocGrotesk ">
+          <div className="flex justify-center gap-5 items-center text-[11px] flex-row text-white font-lightRocGrotesk ">
             <p>Terms of Service</p>
             <p>Disclaimer</p>
             <p>Privacy Policy</p>
