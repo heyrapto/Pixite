@@ -13,25 +13,14 @@ export default function APIPage() {
       <div className="w-full min-h-screen bg-white">
       {/* Hero */}
       <section className="w-full bg-[#D9FF6F] text-black pt-[50px]">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 ">
-          {/* <Image
-            src={grow}
-            alt="Centered Background"
-            width={300}
-           
-            priority
-          /> */}
-        </div>
         <div className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-20 md:py-28 lg:py-32 text-center">
-          <h1 className="font-condRocGrotesk uppercase tracking-tight leading-[0.9] text-[42px] md:text-[84px] lg:text-[112px]">Plug Into the Power of Autify</h1>
+          <div className="inline-flex items-center justify-center mx-auto mb-6">
+            <span className="font-mediumRocGrotesk text-sm md:text-base bg-white/70 text-[#223] rounded-full px-4 py-2 uppercase tracking-wide">APIs</span>
+          </div>
+          <h1 className="font-condRocGrotesk tracking-tight leading-[0.9] text-[42px] md:text-[84px] lg:text-[96px]">Plug Into the Power of Autify</h1>
           <p className="font-regRocGrotesk mt-6 md:mt-8 text-lg md:text-2xl max-w-4xl mx-auto">
             Integrate EPR compliance, sustainability tracking, and impact tokenization into your systems with Autify’s flexible, developer-friendly APIs.
           </p>
-          <div className="mt-10">
-            <a href="#apis" className="inline-block bg-[#7B2CFF] text-white font-extRocGrotesk uppercase px-6 py-3 text-sm md:text-base">
-              Talk to Sales
-            </a>
-          </div>
         </div>
       </section>
 
