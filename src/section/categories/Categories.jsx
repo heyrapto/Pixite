@@ -14,7 +14,7 @@ const categories = [
   {
     name: "TRACT & TRACE SUSTAINABILITY TRACEABILITY",
     description:
-      "Our Sustainability Traceability API tracks and documents the environmental and social impact of products across the supply chain. It standardizes data on emissions, water use, labor standards, and more for a complete view of sustainability metrics.",
+      "Our Sustainability Traceability API tracks and documents the environmental and social impact of products across the supply chain.",
   },
   {
     name: "RECYCLING & CIRCULAR ECONOMY",
@@ -127,7 +127,7 @@ export default function Categories() {
             </h4>
             <div className="md:block hidden absolute inset-0 bg-[#1F0038] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></div>
             <div className="box md:group-hover:bg-[#1F0038] duration-100 transform group-hover:translate-y-[-10px] transition-transform"></div>
-            <p className="md:block hidden absolute group-hover:left-12 left-0 bottom-[20px] w-[800px] text-white text-lg font-semibold leading-[20px] transform translate-y-[20px] font-lightRocGrotesk px-[3%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-transform transition-opacity ease-in-out duration-500">
+            <p className="md:block hidden absolute group-hover:left-12 left-0 bottom-[20px] w-[800px] text-white text-lg font-semibold leading-[20px] transform translate-y-[20px] font-lightRocGrotesk px-[3%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100  transition-opacity ease-in-out duration-500">
               {category.description}
             </p>
           </motion.div>

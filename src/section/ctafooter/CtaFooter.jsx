@@ -15,7 +15,7 @@ export default function CtaFooter() {
           />
         </div>
         <div className="absolute w-full  h-full flex flex-col items-center justify-center z-20">
-          <h1 className="font-condRocGrotesk md:text-[100px] text-[42px]  uppercase mb-5">
+          <h1 className="font-condRocGrotesk md:text-[100px] text-[42px] uppercase mb-5 text-center">
           Build or Buy Verified Climate Impact
           </h1>
           <p className="font-lightRocGrotesk md:w-[768px] text-center md:text-[24px] text-[19px] font-semibold md:px-0 px-5">
