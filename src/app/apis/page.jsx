@@ -1,5 +1,9 @@
 import Navbar from "@/components/Dropdown"
 import Footer from "@/section/footer/Footer"
+import Image from "next/image"
+import traceImg from "@/public/images/3.jpg"
+import grow from "@/public/images/bolt-white.svg";
+import seo from "@/public/images/rocket-primary.svg"
 
 export default function APIPage() {
   return (
@@ -9,6 +13,15 @@ export default function APIPage() {
       <div className="w-full min-h-screen bg-white">
       {/* Hero */}
       <section className="w-full bg-[#D9FF6F] text-black pt-[50px]">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 ">
+          {/* <Image
+            src={grow}
+            alt="Centered Background"
+            width={300}
+           
+            priority
+          /> */}
+        </div>
         <div className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-20 md:py-28 lg:py-32 text-center">
           <h1 className="font-condRocGrotesk uppercase tracking-tight leading-[0.9] text-[42px] md:text-[84px] lg:text-[112px]">Plug Into the Power of Autify</h1>
           <p className="font-regRocGrotesk mt-6 md:mt-8 text-lg md:text-2xl max-w-4xl mx-auto">
@@ -25,12 +38,15 @@ export default function APIPage() {
       {/* Content Sections */}
       <section id="apis" className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-16 md:py-24 space-y-20 md:space-y-28">
         {/* Track & Trace - Supply Chain */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
-          <div className="md:col-span-4">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-5">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={traceImg} alt="Supply Chain Traceability" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="md:col-span-7">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Supply Chain Traceability</h2>
-          </div>
-          <div className="md:col-span-8">
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
               Autify Network’s API empowers seamless integration of end-to-end supply chain traceability into your existing systems. By leveraging blockchain and AI, every transaction, handoff, and transformation is recorded immutably, ensuring data integrity and real-time visibility. The API allows you to capture and share critical product information—such as origin, movement, and ownership—across all supply chain partners.
             </p>
@@ -41,12 +57,10 @@ export default function APIPage() {
         </div>
 
         {/* Track & Trace - Sustainability */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
-          <div className="md:col-span-4">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Sustainability Traceability</h2>
-          </div>
-          <div className="md:col-span-8">
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
               Our Sustainability Traceability API enables brands to track and document the environmental and social impact of their products throughout the supply chain. The API collects and standardizes data on carbon emissions, water usage, labor standards, and more, providing a holistic view of sustainability metrics.
             </p>
@@ -54,15 +68,23 @@ export default function APIPage() {
               Companies can integrate this data directly into their reporting and consumer-facing platforms, supporting regulatory compliance and transparency. The solution helps identify hotspots for improvement and encourages more responsible sourcing and production practices. By making sustainability data accessible and verifiable, Autify Network helps brands demonstrate genuine progress toward their ESG goals.
             </p>
           </div>
+          <div className="md:col-span-5 order-1 md:order-2">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={seo} alt="Sustainability Traceability" width={300} height={300} />
+            </div>
+          </div>
         </div>
 
         {/* Circular Economy */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
-          <div className="md:col-span-4">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-5">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={traceImg} alt="Recycling & Circular Economy" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div className="md:col-span-7">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Circular Economy</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Recycling & Circular Economy</h2>
-          </div>
-          <div className="md:col-span-8">
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
               Autify Network’s API for Recycling & Circular Economy solutions allows businesses to track materials from initial use through recycling and reintegration into new products. The API records each stage—collection, sorting, processing, and reuse—on a tamper-proof blockchain ledger, enabling true closed-loop verification.
             </p>
@@ -73,18 +95,21 @@ export default function APIPage() {
         </div>
 
         {/* Responsibility */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-start">
-          <div className="md:col-span-4">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Responsibility</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">EPR & Carbon Credit MGMT</h2>
-          </div>
-          <div className="md:col-span-8">
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
               Our EPR & Carbon Credit Management API streamlines the complex processes of Extended Producer Responsibility and carbon credit tracking. Producers can automate the calculation, reporting, and verification of their EPR and carbon credit obligations across plastics, tyres, electronics, and emissions.
             </p>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
               The API enables secure issuance, transfer, and retirement of credits, with every transaction recorded immutably for auditability. Integration with regulatory bodies and trading platforms is simplified, reducing administrative burden and risk of fraud. This solution empowers companies to efficiently manage compliance, unlock new value streams, and transparently demonstrate their commitment to environmental stewardship.
             </p>
+          </div>
+          <div className="md:col-span-5 order-1 md:order-2">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={seo} alt="EPR & Carbon Credit" width={300} height={300} />
+            </div>
           </div>
         </div>
       </section>
