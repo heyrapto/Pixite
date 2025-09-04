@@ -60,7 +60,7 @@ export default function Hero() {
             Climate Credits
           </button>
           <button className="bg-[#0DFD0D] text-lg uppercase md:py-[12px] py-2 px-[27px]">
-            Autify Verified
+          Solura Verified
           </button>
         </div>
 

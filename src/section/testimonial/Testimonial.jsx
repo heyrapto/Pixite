@@ -107,7 +107,7 @@ useEffect(() => {
       company: "GreenFlow Logistics",
       bgColor: "bg-[#9E7AFF]",
       textColor: "text-[#1F0038]",
-      text: "Autify helped us cut 18% of our carbon emissions across supply chains in under a year while improving efficiency and cost savings.",
+      text: "Solura helped us cut 18% of our carbon emissions across supply chains in under a year while improving efficiency and cost savings.",
       avatarInitial: "J",
       avatar: james,
     },
@@ -123,7 +123,7 @@ useEffect(() => {
       company: "BlueEarth Textiles",
       bgColor: "bg-[#1F0038]",
       textColor: "text-white",
-      text: "Switching to Autify for sustainability tracking was the best move. Their platform makes reporting simple and credible.",
+      text: "Switching to Solura for sustainability tracking was the best move. Their platform makes reporting simple and credible.",
       avatarInitial: "S",
       avatar: todd,
     },
@@ -135,7 +135,7 @@ useEffect(() => {
     },
     {
       name: "Jonas Weber",
-      text: "Autify went above and beyond to optimize our recycling workflows. We now hit 92% recovery rates across operations.",
+      text: "Solura went above and beyond to optimize our recycling workflows. We now hit 92% recovery rates across operations.",
       bgColor: "bg-[#9e7aff]",
       textColor: "text-[#1F0038]",
       avatarInitial: "J",
@@ -143,7 +143,7 @@ useEffect(() => {
     },
     {
       name: "Maya Thompson",
-      text: "Working with Autify has been a game-changer. Their climate finance solutions unlocked new funding for our renewable projects.",
+      text: "Working with Solura has been a game-changer. Their climate finance solutions unlocked new funding for our renewable projects.",
       bgColor: "bg-[#1F0038]",
       textColor: "text-white",
       avatarInitial: "M",
@@ -151,7 +151,7 @@ useEffect(() => {
     },
     {
       name: "David Chen",
-      text: "Highly recommend Autify. Their vendor aggregation tool gave us visibility across 300+ suppliers with verified impact data.",
+      text: "Highly recommend Solura. Their vendor aggregation tool gave us visibility across 300+ suppliers with verified impact data.",
       bgColor: "bg-[#9E7AFF]",
       textColor: "text-white",
       avatarInitial: "D",
@@ -159,7 +159,7 @@ useEffect(() => {
     },
     {
       name: "Leila Farouk",
-      text: "The Autify platform simplified carbon credit verification. We’ve gained trust from investors and partners globally.",
+      text: "The Solura platform simplified carbon credit verification. We’ve gained trust from investors and partners globally.",
       bgColor: "bg-[#B3FEB3]",
       textColor: "text-[#1F0038]",
       avatarInitial: "L",
@@ -168,7 +168,7 @@ useEffect(() => {
     {
       name: "Hiro Tanaka",
       company: "Zenith Manufacturing",
-      text: "Consistent, transparent, and forward-thinking. Autify has supported our journey toward net-zero with reliable tools.",
+      text: "Consistent, transparent, and forward-thinking. Solura has supported our journey toward net-zero with reliable tools.",
       bgColor: "bg-[#1F0038]",
       textColor: "text-white",
       avatarInitial: "H",
@@ -176,7 +176,7 @@ useEffect(() => {
     },
     {
       name: "Clara Jensen",
-      text: "We’ve been working with Autify since 2016. Their insights helped us stay compliant and strengthen our sustainability strategy.",
+      text: "We’ve been working with Solura since 2016. Their insights helped us stay compliant and strengthen our sustainability strategy.",
       bgColor: "bg-[#5747FF]",
       textColor: "text-white",
       avatarInitial: "C",
@@ -184,7 +184,7 @@ useEffect(() => {
     },
     {
       name: "Samuel Okoro",
-      text: "Autify delivered beyond expectations. With their support, we achieved 100% packaging compliance and cut waste dramatically.",
+      text: "Solura delivered beyond expectations. With their support, we achieved 100% packaging compliance and cut waste dramatically.",
       bgColor: "bg-[#9E7AFF]",
       textColor: "text-white",
       avatarInitial: "S",
@@ -192,7 +192,7 @@ useEffect(() => {
     },
     {
       name: "Elena Petrova",
-      text: "Outstanding results. The Autify team helped us unlock actionable insights from climate data and strengthen investor trust.",
+      text: "Outstanding results. The Solura team helped us unlock actionable insights from climate data and strengthen investor trust.",
       bgColor: "bg-[#B3FEB3]",
       textColor: "text-[#1F0038]",
       avatarInitial: "E",

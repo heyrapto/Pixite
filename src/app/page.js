@@ -26,8 +26,6 @@ export default function Home() {
       <Team />
       <CtaFooter />
       <Footer/>
-
-     
     </div>
   );
 }

@@ -143,7 +143,7 @@ export default function Footer() {
       <div className="md:pt-[200px] pt-[100px] flex md:flex-col flex-col justify-center items-center text-center md:px-0 px-6 ">
         <div className="md:w-[512px]">
           <p className="text-center text-sm text-white font-lightRocGrotesk ">
-            Autify Network acknowledges that we live, work, and build solutions
+          Solura Network acknowledges that we live, work, and build solutions
             on lands that carry deep histories of stewardship. We honor and
             respect those who care for the Earth — past, present, and future.
           </p>
@@ -152,7 +152,7 @@ export default function Footer() {
               2C/21 Lawson St, Penrith NSW 2750
             </p>
             <p className="text-center text-sm text-white font-lightRocGrotesk ">
-              © 2024 Autify Network. All rights reserved.
+              © 2024 Solura Network. All rights reserved.
             </p>
           </div>
           <div className="flex justify-center gap-5 items-center text-[11px] flex-row text-white font-lightRocGrotesk ">

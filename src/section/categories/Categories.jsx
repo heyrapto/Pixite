@@ -9,7 +9,7 @@ const categories = [
   {
     name: "SUPPLY CHAIN TRACEABILITY",
     description:
-      "Autify Network’s API brings blockchain- and AI-powered supply chain traceability into your systems. Track and share product origin, movement, and ownership with real-time, tamper-proof data.",
+      "Solura Network’s API brings blockchain- and AI-powered supply chain traceability into your systems. Track and share product origin, movement, and ownership with real-time, tamper-proof data.",
   },
   {
     name: "TRACT & TRACE SUSTAINABILITY TRACEABILITY",
@@ -19,7 +19,7 @@ const categories = [
   {
     name: "RECYCLING & CIRCULAR ECONOMY",
     description:
-      "Enable closed-loop recycling by tracking materials from use to reuse with Autify’s tamper-proof API.",
+      "Enable closed-loop recycling by tracking materials from use to reuse with Solura's tamper-proof API.",
   },
   {
     name: "EPR & CARBON CREDIT MGMT",
@@ -34,7 +34,7 @@ const categories = [
   {
     name: "B2B CROSS BORDER PAYMENTS",
     description:
-      "Autify Network powers real-time, low-cost, cross-border B2B payments with secure blockchain technology.",
+      "Solura Network powers real-time, low-cost, cross-border B2B payments with secure blockchain technology.",
   },
   {
     name: "TRADE FINANCE",

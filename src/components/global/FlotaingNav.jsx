@@ -63,7 +63,7 @@ export const FloatingNav = ({ navItems, className }) => {
         <div className="flex   gap-10 items-center">
           <ul className="xl:flex hidden gap-10 items-center text-[#fcfcfc] font-lightRocGrotesk">
             <li>Home</li>
-            <li>Expertise</li>
+            <li>Products</li>
             <li>Projects</li>
             <li>Success</li>
             <li>About</li>
