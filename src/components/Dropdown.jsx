@@ -77,7 +77,7 @@ const Navbar = () => {
 
               <Link
                 href="/products"
-                onMouseEnter={() => handleMouseEnter("expertise")}
+                onMouseEnter={() => handleMouseEnter("products")}
                 onMouseLeave={handleMouseLeave}
                 className={`text-white mx-[14px] flex items-center gap-4 bg-transparent py-[3px] px-3 rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/products" ? "bg-[#47476980]" : ""}`}
               >
@@ -85,7 +85,7 @@ const Navbar = () => {
                 <PiCaretDownBold className="text-[18px]" />
               </Link>
               <button
-                onMouseEnter={() => handleMouseEnter("projects")}
+                onMouseEnter={() => handleMouseEnter("resources")}
 
                 onMouseLeave={handleMouseLeave}
                 className="text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200"
@@ -95,7 +95,7 @@ const Navbar = () => {
               </button>
               <Link
                 href="/apis"
-                onMouseEnter={() => handleMouseEnter("success")}
+                onMouseEnter={() => handleMouseEnter("apis")}
                 onMouseLeave={handleMouseLeave}
                 className={`text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/apis" ? "bg-[#47476980]" : ""}`}
               >
@@ -131,10 +131,10 @@ const Navbar = () => {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="absolute left-0 px-4 top-full w-full h-[473px] backdrop-blur-[10px] bg-[#47476980] z-[1000000] text-black "
             >
-              {openDropdown === "expertise" && <Expertise />}
-              {openDropdown === "projects" && <Projects />}
+              {openDropdown === "products" && <Products />}
+              {openDropdown === "resources" && <Resources />}
               {openDropdown === "about" && <About />}
-              {openDropdown === "success" && <Success />}
+              {openDropdown === "apis" && <APIs />}
             </motion.div>
           )}
         </AnimatePresence>
@@ -156,7 +156,7 @@ const NavLink = ({ href, isActive, label }) => {
   );
 };
 
-const Expertise = () => {
+const Products = () => {
   const services = [
     {
       id: 1,
@@ -298,7 +298,7 @@ const About = () => {
   );
 };
 
-const Success = () => {
+const APIs = () => {
   const services = [
     {
       id: 1,
@@ -395,7 +395,7 @@ const Success = () => {
   );
 };
 
-const Projects = () => {
+const Resources = () => {
   const services = [
     {
       id: 1,
