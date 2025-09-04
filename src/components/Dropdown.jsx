@@ -11,10 +11,11 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import Link from "next/link";
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
-  const [activeLink, setActiveLink] = useState("home");
+  const pathname = usePathname();
   const router = useRouter();
 
   const handleMouseEnter = (label) => {
@@ -69,25 +70,20 @@ const Navbar = () => {
         className=" w-full  font-roc_grotesk  xl:px-5 xl:pt-5 left-0 fixed z-[500] flex justify-between items-center  "
       >
         <div className=" w-full  backdrop-blur-[10px] bg-[#47476980]   md:px-5 px-4 xl:h-[80px] h-[100px] flex justify-between items-center ">
-          <Image src={logo} className="xl:w-[150px] w-[120px] cursor-pointer" alt="logo" onClick={() => router.push('/apis')} />
+          <Image src={logo} className="xl:w-[150px] w-[120px] cursor-pointer" alt="logo" onClick={() => router.push('/')} />
           <div className="flex xl:gap-[10px] gap-[24px] items-center">
             <nav className="xl:flex hidden  gap-[10px] items-center font-lightRocGrotesk">
-              <NavLink
-                href="/"
-                label="Home"
-                isActive={activeLink === "home"}
-                onClick={() => setActiveLink("home")}
-              />
+              <NavLink href="/" label="Home" isActive={pathname === "/"} />
 
-              <button
+              <Link
+                href="/products"
                 onMouseEnter={() => handleMouseEnter("expertise")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => router.push('/products')}
-                className="text-white mx-[14px] flex items-center gap-4 bg-transparent py-[3px] px-3 rounded hover:bg-[#47476980] transition-colors duration-200"
+                className={`text-white mx-[14px] flex items-center gap-4 bg-transparent py-[3px] px-3 rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/products" ? "bg-[#47476980]" : ""}`}
               >
                 Products
                 <PiCaretDownBold className="text-[18px]" />
-              </button>
+              </Link>
               <button
                 onMouseEnter={() => handleMouseEnter("projects")}
 
@@ -97,15 +93,15 @@ const Navbar = () => {
                 Resources
                 <PiCaretDownBold className="text-[18px]" />
               </button>
-              <button
+              <Link
+                href="/apis"
                 onMouseEnter={() => handleMouseEnter("success")}
                 onMouseLeave={handleMouseLeave}
-                onClick={() => router.push('/apis')}
-                className="text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200"
+                className={`text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/apis" ? "bg-[#47476980]" : ""}`}
               >
                 APIs
                 <PiCaretDownBold className="text-[18px]" />
-              </button>
+              </Link>
               <button
                 onMouseEnter={() => handleMouseEnter("about")}
                 onMouseLeave={handleMouseLeave}
@@ -149,14 +145,14 @@ const Navbar = () => {
 
 const NavLink = ({ href, isActive, label }) => {
   return (
-    <a
+    <Link
       href={href}
       className={`text-[#fcfcfc] font-lightRocGrotesk mx-[14px] ${
         isActive ? "bg-[#47476980]" : ""
       } px-3 py-[2.5px] rounded`}
     >
       {label}
-    </a>
+    </Link>
   );
 };
 
