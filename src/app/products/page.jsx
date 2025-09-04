@@ -3,6 +3,7 @@ import Footer from "@/section/footer/Footer"
 import Image from "next/image"
 import traceImg from "@/public/images/3.jpg"
 import seo from "@/public/images/rocket-primary.svg"
+import grow from "@/public/images/bolt-white.svg";
 
 export default function ProductsPage() {
   return (
@@ -11,8 +12,16 @@ export default function ProductsPage() {
 
       <div className="w-full min-h-screen bg-white">
       {/* Hero */}
-      <section className="w-full bg-[#D9FF6F] text-black pt-[50px]">
-        <div className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-20 md:py-28 lg:py-32 text-center">
+      <section className="w-full bg-[#D9FF6F] text-black pt-[50px] relative overflow-hidden h-fit">
+      <div className="absolute inset-0 flex items-center justify-center z-0">
+    <Image
+      src={grow}
+      alt="Centered Background"
+      width={300}
+      priority
+    />
+  </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-20 md:py-28 lg:py-32 text-center">
           <div className="inline-flex items-center justify-center mx-auto mb-6">
             <span className="font-mediumRocGrotesk text-sm md:text-base bg-white/70 text-[#223] rounded-full px-4 py-2 uppercase tracking-wide">Our Products</span>
           </div>
