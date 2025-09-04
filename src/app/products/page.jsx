@@ -29,7 +29,7 @@ export default function ProductsPage() {
             Built for Compliance. Designed for Impact.
           </h1>
           <p className="font-regRocGrotesk mt-6 md:mt-8 text-lg md:text-2xl max-w-4xl mx-auto">
-            Autify offers powerful tools to manage EPR compliance, track sustainability, and tokenize impact — all in one seamless platform.
+            Solura offers powerful tools to manage EPR compliance, track sustainability, and tokenize impact — all in one seamless platform.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function ProductsPage() {
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Supply Chain Traceability</h2>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
-              Autify Network leverages blockchain and AI to provide end-to-end traceability across complex supply chains. Every transaction and product movement is recorded immutably, allowing all stakeholders to verify origins, authenticity, and compliance in real time.
+            Solura Network leverages blockchain and AI to provide end-to-end traceability across complex supply chains. Every transaction and product movement is recorded immutably, allowing all stakeholders to verify origins, authenticity, and compliance in real time.
             </p>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
               This transparency combats counterfeiting and inefficiencies, ensuring products are tracked from source to shelf. Businesses and consumers alike benefit from increased trust and data integrity throughout the supply chain.
@@ -61,7 +61,7 @@ export default function ProductsPage() {
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Sustainability Traceability</h2>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
-              Our platform enables brands to track and verify the sustainability credentials of their products at every stage. By capturing data on materials, processes, and certifications, Autify Network helps companies prove their environmental impact and meet regulatory requirements.
+              Our platform enables brands to track and verify the sustainability credentials of their products at every stage. By capturing data on materials, processes, and certifications, Solura Network helps companies prove their environmental impact and meet regulatory requirements.
             </p>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
               This empowers businesses to make greener choices and gives consumers confidence in the sustainability of their purchases. The result is greater accountability and measurable progress toward sustainability goals.
@@ -83,9 +83,9 @@ export default function ProductsPage() {
           </div>
           <div className="md:col-span-7">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">CircularEconomy</p>
-            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Recycling & Circular Economy</h2>
+            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Recycling &amp; Circular Economy</h2>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
-              Autify Network supports the transition to a circular economy by tracking materials through their lifecycle and facilitating recycling initiatives. Blockchain records ensure that recycled content and waste management processes are transparent and verifiable.
+            Solura Network supports the transition to a circular economy by tracking materials through their lifecycle and facilitating recycling initiatives. Blockchain records ensure that recycled content and waste management processes are transparent and verifiable.
             </p>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
               This not only helps brands meet EPR obligations but also incentivizes responsible resource use and reduces environmental impact. Companies can demonstrate closed-loop practices and consumers can trust recycled claims.
