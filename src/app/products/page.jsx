@@ -93,17 +93,17 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* Responsibility */}
+        {/* ERP */}
         <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
-            <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Responsibility</p>
-            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">EPR & Carbon Credit MGMT</h2>
+            <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">ERP</p>
+            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Vendor Aggregator Platform</h2>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
               Our platform streamlines Extended Producer Responsibility (EPR) compliance and carbon credit management by automating reporting, verification, and credit issuance. Producers can track their obligations for plastics, tyres, electronics, and carbon emissions—all on a single, tamper-proof ledger.
             </p>
             <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
-              This simplifies regulatory compliance, reduces fraud, and enables transparent trading of carbon credits and EPR certificates. Companies can efficiently manage their environmental responsibilities and unlock new value streams.
-            </p>
+              Our Vendor Aggregator Platform connects brands with verified suppliers and vendors worldwide. Using blockchain-based verification, Autify ensures only legitimate, high-quality partners are onboarded, reducing risk and building trust.
+Companies can easily discover, evaluate, and collaborate with vendors, expanding their global reach while maintaining quality and compliance.</p>
           </div>
           <div className="md:col-span-5 order-1 md:order-2">
             <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
