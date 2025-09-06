@@ -4,7 +4,7 @@ import logo from "@/public/images/logo.svg";
 import Image from "next/image";
 import seo from "@/public/images/rocket-primary.svg";
 import robust from "@/public/images/3.jpg";
-import { PiCaretDownBold } from "react-icons/pi";
+import { PiCaretDownBold, PiCaretRightBold } from "react-icons/pi";
 import {
   motion,
   AnimatePresence,
@@ -15,6 +15,7 @@ import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileOpenSection, setMobileOpenSection] = useState(null);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -24,6 +25,10 @@ const Navbar = () => {
 
   const handleMouseLeave = () => {
     setOpenDropdown(null);
+  };
+
+  const handleMobileSectionToggle = (section) => {
+    setMobileOpenSection(mobileOpenSection === section ? null : section);
   };
 
   const { scrollYProgress } = useScroll();
@@ -108,14 +113,17 @@ const Navbar = () => {
               </button>
             </nav>
 
-            <button className="bg-white hover:bg-transparent hover:border-[2px] border-white hover:text-white  xl:ml-4 lg:px-[28px] px-[16px] md:py-[10px] py-3 uppercase text-xs md:text-lg font-roc_grotesk">
+            <button className="bg-white hover:bg-transparent hover:border-[2px] border-white hover:text-white  xl:ml-4 lg:px-[28px] px-[16px] md:py-[10px] py-3 uppercase text-xs md:text-lg font-roc_grotesk md:flex hidden">
               Talk to Sales
             </button>
-            <div className="xl:hidden block space-y-[3px]">
-              <span className="block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out "></span>
-              <span className="block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out "></span>
-              <span className="block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out "></span>
-            </div>
+            <button 
+              onClick={showSidebar}
+              className="xl:hidden block space-y-[3px] p-2"
+            >
+              <span className={`block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out ${navbar ? 'rotate-45 translate-y-[10px]' : ''}`}></span>
+              <span className={`block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out ${navbar ? 'opacity-0' : ''}`}></span>
+              <span className={`block h-[7px] w-[30px] origin-center rounded-full bg-[#FFFFFF] transition-transform ease-in-out ${navbar ? '-rotate-45 -translate-y-[10px]' : ''}`}></span>
+            </button>
           </div>
         </div>
         <AnimatePresence>
@@ -125,12 +133,182 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="w-full h-[473px] backdrop-blur-[10px] bg-[#47476980] z-[1000000] text-black px-4"
+              className="w-full h-auto min-h-[473px] backdrop-blur-[10px] bg-[#47476980] z-[1000000] text-black px-4"
             >
               {openDropdown === "products" && <Products />}
               {openDropdown === "resources" && <Resources />}
               {openDropdown === "about" && <About />}
               {openDropdown === "apis" && <APIs />}
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {navbar && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="xl:hidden w-full backdrop-blur-[10px] bg-[#47476980] text-white"
+            >
+              <div className="px-4 py-6 space-y-4">
+                <Link 
+                  href="/" 
+                  className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                  onClick={closeSidebar}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/products" 
+                  className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                  onClick={closeSidebar}
+                >
+                  Products
+                </Link>
+                
+                {/* Resources Section */}
+                <div>
+                  <button 
+                    className="flex items-center justify-between w-full text-left py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                    onClick={() => handleMobileSectionToggle("resources")}
+                  >
+                    <span>Resources</span>
+                    <PiCaretRightBold 
+                      className={`text-[16px] transition-transform duration-200 ${
+                        mobileOpenSection === "resources" ? "rotate-90" : ""
+                      }`} 
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {mobileOpenSection === "resources" && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pl-4 space-y-2 mt-2">
+                          <Link 
+                            href="/resources/blogs" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Blogs
+                          </Link>
+                          <Link 
+                            href="/resources/case-study" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Case Study
+                          </Link>
+                          <Link 
+                            href="/resources/white-paper" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            White Paper
+                          </Link>
+                          <Link 
+                            href="/resources/industry" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Industry
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <Link 
+                  href="/apis" 
+                  className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                  onClick={closeSidebar}
+                >
+                  APIs
+                </Link>
+                
+                {/* About Section */}
+                <div>
+                  <button 
+                    className="flex items-center justify-between w-full text-left py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                    onClick={() => handleMobileSectionToggle("about")}
+                  >
+                    <span>About</span>
+                    <PiCaretRightBold 
+                      className={`text-[16px] transition-transform duration-200 ${
+                        mobileOpenSection === "about" ? "rotate-90" : ""
+                      }`} 
+                    />
+                  </button>
+                  <AnimatePresence>
+                    {mobileOpenSection === "about" && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pl-4 space-y-2 mt-2">
+                          <Link 
+                            href="/about/our-difference" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Our Difference
+                          </Link>
+                          <Link 
+                            href="/about/meet-the-team" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Meet the Team
+                          </Link>
+                          <Link 
+                            href="/about/careers" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Careers
+                          </Link>
+                          <Link 
+                            href="/about/reviews" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Reviews
+                          </Link>
+                          <Link 
+                            href="/about/contact" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Contact
+                          </Link>
+                          <Link 
+                            href="/about/blog" 
+                            className="block py-2 text-white hover:bg-[#47476940] px-3 rounded transition-colors duration-200"
+                            onClick={closeSidebar}
+                          >
+                            Blog
+                          </Link>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <button className="w-full bg-white hover:bg-transparent hover:border-[2px] border-white hover:text-white px-4 py-3 uppercase text-sm font-roc_grotesk rounded mt-4 text-[#000]">
+                  Talk to Sales
+                </button>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -194,18 +372,23 @@ const Products = () => {
   
   return (
     <div className=" flex justify-center w-full">
-      <div className="w-[1050px] text-white">
+      <div className="w-full max-w-[1050px] text-white px-4">
         <h5 className="font-mediumRocGrotesk uppercase text-[20px] mt-8 pb-1 border-b border-[#fcfcfc70] ">
           Projects/Solutions
         </h5>
-        <div className="grid grid-cols-3 gap-[40px] py-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[40px] py-6">
           {services.map((service) => (
-            <div key={service.id} className="flex items-center gap-4">
+            <Link 
+              key={service.id} 
+              href={`/products/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
+            >
               <Image
                 src={service.image}
                 width={50}
                 height={50}
                 alt={service.title}
+                className="flex-shrink-0"
               />
               <div className="flex flex-col">
                 <h5 className="font-condRocGrotesk text-lg uppercase">
@@ -215,7 +398,7 @@ const Products = () => {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex justify-end w-full mt-7">
@@ -268,25 +451,30 @@ const About = () => {
   ];
   return (
     <div className=" flex justify-center w-full">
-      <div className="w-[1050px] text-white">
+      <div className="w-full max-w-[1050px] text-white px-4">
         <h5 className="font-mediumRocGrotesk uppercase text-[20px] mt-8 pb-1 border-b border-[#fcfcfc70] ">
           Get to know us
         </h5>
-        <div className="grid grid-cols-3 gap-[40px] py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[40px] py-10 md:py-20">
           {services.map((service) => (
-            <div key={service.id} className="flex items-center gap-4">
+            <Link 
+              key={service.id} 
+              href={`/about/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
+            >
               <Image
                 src={service.image}
                 width={50}
                 height={50}
                 alt={service.title}
+                className="flex-shrink-0"
               />
               <div className="flex flex-col">
                 <h5 className="font-condRocGrotesk text-lg uppercase">
                   {service.title}
                 </h5>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -359,18 +547,23 @@ const APIs = () => {
     //   </div>
     // </div>
     <div className=" flex justify-center w-full">
-      <div className="w-[1050px] text-white">
+      <div className="w-full max-w-[1050px] text-white px-4">
         <h5 className="font-mediumRocGrotesk uppercase text-[20px] mt-8 pb-1 border-b border-[#fcfcfc70] ">
           APIs
         </h5>
-        <div className="grid grid-cols-2 gap-[40px] py-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[40px] py-6">
           {services.map((service) => (
-            <div key={service.id} className="flex items-center gap-4">
+            <Link 
+              key={service.id} 
+              href={`/apis/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
+            >
               <Image
                 src={service.image}
                 width={50}
                 height={50}
                 alt={service.title}
+                className="flex-shrink-0"
               />
               <div className="flex flex-col">
                 <h5 className="font-condRocGrotesk text-lg uppercase">
@@ -380,7 +573,7 @@ const APIs = () => {
                   {service.description}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex justify-end w-full mt-7">
@@ -421,10 +614,14 @@ const Resources = () => {
   ];
   return (
     <div className=" flex justify-center w-full">
-      <div className="w-[1300px] text-white">
-        <div className="grid grid-cols-4 gap-[60px] py-6">
+      <div className="w-full max-w-[1300px] text-white px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] md:gap-[60px] py-6">
           {services.map((service) => (
-            <div key={service.id} className="flex flex-col w-[100%] pt-5  ">
+            <Link 
+              key={service.id} 
+              href={`/resources/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              className="flex flex-col w-[100%] pt-5 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
+            >
               <h5 className=" text-lg uppercase truncate font-mediumRocGrotesk text-[18px] border-b border-[#fcfcfc70] leading-[24px]  mb-5">
                 {service.title}
               </h5>
@@ -435,7 +632,7 @@ const Resources = () => {
                 height={254}
                 alt={service.title}
               />
-            </div>
+            </Link>
           ))}
         </div>
         <div className="flex justify-end w-full mt-5">
