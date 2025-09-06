@@ -67,7 +67,8 @@ const Navbar = () => {
         transition={{
           duration: 0.2,
         }}
-        className=" w-full  font-roc_grotesk  xl:px-5 xl:pt-5 left-0 fixed z-[500] flex justify-between items-center  "
+        className=" w-full  font-roc_grotesk  xl:px-5 xl:pt-5 left-0 fixed z-[500] flex flex-col "
+        onMouseLeave={handleMouseLeave}
       >
         <div className=" w-full  backdrop-blur-[10px] bg-[#47476980]   md:px-5 px-4 xl:h-[80px] h-[100px] flex justify-between items-center ">
           <Image src={logo} className="xl:w-[150px] w-[120px] cursor-pointer" alt="logo" onClick={() => router.push('/')} />
@@ -78,7 +79,6 @@ const Navbar = () => {
               <Link
                 href="/products"
                 onMouseEnter={() => handleMouseEnter("products")}
-                onMouseLeave={handleMouseLeave}
                 className={`text-white mx-[14px] flex items-center gap-4 bg-transparent py-[3px] px-3 rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/products" ? "bg-[#47476980]" : ""}`}
               >
                 Products
@@ -86,8 +86,6 @@ const Navbar = () => {
               </Link>
               <button
                 onMouseEnter={() => handleMouseEnter("resources")}
-
-                onMouseLeave={handleMouseLeave}
                 className="text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200"
               >
                 Resources
@@ -96,7 +94,6 @@ const Navbar = () => {
               <Link
                 href="/apis"
                 onMouseEnter={() => handleMouseEnter("apis")}
-                onMouseLeave={handleMouseLeave}
                 className={`text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200 ${pathname === "/apis" ? "bg-[#47476980]" : ""}`}
               >
                 APIs
@@ -104,7 +101,6 @@ const Navbar = () => {
               </Link>
               <button
                 onMouseEnter={() => handleMouseEnter("about")}
-                onMouseLeave={handleMouseLeave}
                 className="text-white mx-[14px] flex items-center gap-4 bg-transparent px-3 py-[2.5px] rounded hover:bg-[#47476980] transition-colors duration-200"
               >
                 About
@@ -129,7 +125,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 15 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute left-0 px-4 top-full w-full h-[473px] backdrop-blur-[10px] bg-[#47476980] z-[1000000] text-black "
+              className="w-full h-[473px] backdrop-blur-[10px] bg-[#47476980] z-[1000000] text-black px-4"
             >
               {openDropdown === "products" && <Products />}
               {openDropdown === "resources" && <Resources />}
