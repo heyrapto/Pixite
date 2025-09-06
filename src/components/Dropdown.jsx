@@ -4,6 +4,10 @@ import logo from "@/public/images/logo.svg";
 import Image from "next/image";
 import seo from "@/public/images/rocket-primary.svg";
 import robust from "@/public/images/3.jpg";
+import blogs from "@/public/images/resources/blogs.webp";
+import study from "@/public/images/resources/study.webp";
+import doc from "@/public/images/resources/doc.webp"
+import industries from "@/public/images/resources/industries.webp"
 import { PiCaretDownBold, PiCaretRightBold } from "react-icons/pi";
 import {
   motion,
@@ -377,10 +381,15 @@ const Products = () => {
           Projects/Solutions
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[40px] py-6">
-          {services.map((service) => (
+          {services.map((service) => {
+            const sectionId = service.title.toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/&/g, 'and')
+              .replace(/amp;/g, '');
+            return (
             <Link 
               key={service.id} 
-              href={`/products/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              href={`/products#${sectionId}`}
               className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
             >
               <Image
@@ -399,7 +408,8 @@ const Products = () => {
                 </p>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
         <div className="flex justify-end w-full mt-7">
           <h5 className="font-lightRocGrotesk">Discover More</h5>
@@ -456,10 +466,15 @@ const About = () => {
           Get to know us
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[20px] md:gap-[40px] py-10 md:py-20">
-          {services.map((service) => (
+          {services.map((service) => {
+            const sectionId = service.title.toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/&/g, 'and')
+              .replace(/amp;/g, '');
+            return (
             <Link 
               key={service.id} 
-              href={`/about/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              href={`/`}
               className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
             >
               <Image
@@ -475,7 +490,8 @@ const About = () => {
                 </h5>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
@@ -552,10 +568,15 @@ const APIs = () => {
           APIs
         </h5>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px] md:gap-[40px] py-6">
-          {services.map((service) => (
+          {services.map((service) => {
+            const sectionId = service.title.toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/&/g, 'and')
+              .replace(/amp;/g, '');
+            return (
             <Link 
               key={service.id} 
-              href={`/apis/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              href={`/apis#${sectionId}`}
               className="flex items-center gap-4 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
             >
               <Image
@@ -574,7 +595,8 @@ const APIs = () => {
                 </p>
               </div>
             </Link>
-          ))}
+            );
+          })}
         </div>
         <div className="flex justify-end w-full mt-7">
           <h5 className="font-lightRocGrotesk">Discover More</h5>
@@ -590,36 +612,41 @@ const Resources = () => {
       id: 1,
       title: "Blogs",
       description: "Boost your business with award-winning services",
-      image: robust,
+      image: blogs,
     },
     {
       id: 2,
       title: "Case Study",
       description: "Create stunning and functional websites",
-      image: robust, // Replace with actual image
+      image: study, // Replace with actual image
     },
     {
       id: 3,
       title: "White paper",
       description:
         "Drive traffic and sales with effective marketing strategies",
-      image: robust, // Replace with actual image
+      image: doc, // Replace with actual image
     },
     {
       id: 4,
       title: "Industry",
       description: "Enhance user experience with intuitive designs",
-      image: robust, // Replace with actual image
+      image: industries, // Replace with actual image
     },
   ];
   return (
     <div className=" flex justify-center w-full">
       <div className="w-full max-w-[1300px] text-white px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[20px] md:gap-[60px] py-6">
-          {services.map((service) => (
+          {services.map((service) => {
+            const sectionId = service.title.toLowerCase()
+              .replace(/\s+/g, '-')
+              .replace(/&/g, 'and')
+              .replace(/amp;/g, '');
+            return (
             <Link 
               key={service.id} 
-              href={`/resources/${service.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              href={`/`}
               className="flex flex-col w-[100%] pt-5 cursor-pointer hover:bg-[#47476940] p-3 rounded-lg transition-colors duration-200"
             >
               <h5 className=" text-lg uppercase truncate font-mediumRocGrotesk text-[18px] border-b border-[#fcfcfc70] leading-[24px]  mb-5">
@@ -627,13 +654,14 @@ const Resources = () => {
               </h5>
 
               <Image
-                className="w-full"
+                className="w-full h-full object-cover"
                 src={service.image}
                 height={254}
                 alt={service.title}
               />
             </Link>
-          ))}
+            );
+          })}
         </div>
         <div className="flex justify-end w-full mt-5">
           <h5 className="font-lightRocGrotesk">Discover More</h5>

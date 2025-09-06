@@ -37,7 +37,7 @@ export default function ProductsPage() {
       {/* Content Sections */}
       <section className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-16 md:py-24 space-y-20 md:space-y-28">
         {/* Track & Trace - Supply Chain */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="supply-chain-traceability" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-5">
             <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
               <Image src={traceImg} alt="Supply Chain Traceability" className="w-full h-full object-cover" />
@@ -56,7 +56,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Track & Trace - Sustainability */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="sustainability-tracking" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Sustainability Traceability</h2>
@@ -75,7 +75,7 @@ export default function ProductsPage() {
         </div>
 
         {/* Circular Economy */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="recycling-circular-economy" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-5">
             <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
               <Image src={traceImg} alt="Recycling & Circular Economy" className="w-full h-full object-cover" />
@@ -94,7 +94,7 @@ export default function ProductsPage() {
         </div>
 
         {/* ERP */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="epr-carbon-credits" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">ERP</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Vendor Aggregator Platform</h2>
@@ -111,10 +111,48 @@ Companies can easily discover, evaluate, and collaborate with vendors, expanding
             </div>
           </div>
         </div>
-      </section>
-      </div>
 
-      <Footer />
+        {/* B2B Climate Payments */}
+        <div id="b2b-climate-payments" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-5">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={seo} alt="B2B Climate Payments" width={300} height={300} />
+            </div>
+          </div>
+          <div className="md:col-span-7">
+            <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Payments</p>
+            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">B2B Climate Payments</h2>
+            <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
+              Enable real-time, low-cost, cross-border green payments with our B2B Climate Payments solution. This platform facilitates sustainable trade finance and climate-related transactions with full transparency and compliance tracking.
+            </p>
+            <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
+              Businesses can process payments for carbon credits, sustainable goods, and environmental services with reduced fees and enhanced security. The system ensures all transactions are recorded and verified for regulatory compliance and impact measurement.
+            </p>
+          </div>
+        </div>
+
+        {/* Climate Finance */}
+        <div id="climate-finance" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div className="md:col-span-7 order-2 md:order-1">
+            <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Finance</p>
+            <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Climate Finance</h2>
+            <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed">
+              Bring transparency and access to sustainable trade finance with our Climate Finance platform. This solution connects businesses with green financing options and tracks the environmental impact of funded projects.
+            </p>
+            <p className="font-regRocGrotesk text-base md:text-lg leading-relaxed mt-4">
+              Companies can access climate-focused funding, track project outcomes, and demonstrate measurable environmental benefits. The platform ensures all financed projects meet sustainability criteria and provides ongoing impact monitoring.
+            </p>
+          </div>
+          <div className="md:col-span-5 order-1 md:order-2">
+            <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
+              <Image src={seo} alt="Climate Finance" width={300} height={300} />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  )
+
+    <Footer />
+  </div>
+)
 }

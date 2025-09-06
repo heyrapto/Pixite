@@ -35,7 +35,7 @@ export default function APIPage() {
       {/* Content Sections */}
       <section id="apis" className="max-w-7xl mx-auto px-5 md:px-8 xl:px-10 py-16 md:py-24 space-y-20 md:space-y-28">
         {/* Track & Trace - Supply Chain */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="supply-chain-traceability" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-5">
             <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
               <Image src={traceImg} alt="Supply Chain Traceability" className="w-full h-full object-cover" />
@@ -54,7 +54,7 @@ export default function APIPage() {
         </div>
 
         {/* Track & Trace - Sustainability */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="sustainability-tracking" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Track & Trace</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">Sustainability Traceability</h2>
@@ -73,7 +73,7 @@ export default function APIPage() {
         </div>
 
         {/* Circular Economy */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="recycling-circular-economy" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-5">
             <div className="w-full aspect-[4/3] bg-[#F5F5F5] flex items-center justify-center">
               <Image src={traceImg} alt="Recycling & Circular Economy" className="w-full h-full object-cover" />
@@ -92,7 +92,7 @@ export default function APIPage() {
         </div>
 
         {/* Responsibility */}
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
+        <div id="epr-carbon-credits" className="grid md:grid-cols-12 gap-8 md:gap-10 items-center">
           <div className="md:col-span-7 order-2 md:order-1">
             <p className="font-extRocGrotesk text-[#7B2CFF] uppercase text-sm tracking-wide">Responsibility</p>
             <h2 className="font-condRocGrotesk uppercase text-[34px] md:text-[54px] leading-[1] mt-2">EPR & Carbon Credit MGMT</h2>
