@@ -1,26 +1,26 @@
 "use client";
 import React from "react";
-import one from "@/public/images/2.jpg";
-import two from "@/public/images/1.jpg";
-import three from "@/public/images/3.jpg";
+import one from "@/public/images/mission/1.webp";
+import two from "@/public/images/mission/2.webp";
+import three from "@/public/images/mission/3.webp";
 import Image from "next/image";
 
 export default function Projects() {
   const imgs = [
     {
       src: one,
-      text: "Clearly It",
-      description: "Clearly IT, a trusted provider of FreePBX",
+      text: "Tokenize Impact",
+      description: "All plastics and credits should live on-chain.",
     },
     {
       src: two,
-      text: "Gourmet gateaway tours",
-      description: "Clearly IT, a trusted provider of FreePBX",
+      text: "Power Compliance",
+      description: "Help brands meet EPR goals with traceable credits.",
     },
     {
       src: three,
-      text: "Glenbrook Rotary markets",
-      description: "Clearly IT, a trusted provider of FreePBX",
+      text: "Enable Circularity",
+      description: "Build tools for real recycling, not reports.",
     },
   ];
 
@@ -28,7 +28,7 @@ export default function Projects() {
     <div className="px-[4%] my-[100px]">
       <div className="border-t-[0.5px] border-[#9d7aff7c]">
         <h5 className="font-lightRocGrotesk font-semibold mt-3 mb-8 text-white">
-          Our recent projects.
+          Our mission.
         </h5>
 
         <div className="flex sm:flex-row flex-col gap-[50px]">
